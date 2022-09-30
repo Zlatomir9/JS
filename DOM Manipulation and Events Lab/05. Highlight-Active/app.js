@@ -9,13 +9,13 @@ function focused() {
         element.addEventListener("blur", blur);
     });
 
-    function focus(element) {
-        let parent = element.target.parentNode;
+    function focus(e) {
+        let parent = e.target.parentNode;
         parent.classList.add("focused");
     }
 
-    function blur(element) {
-        let parent = element.target.parentNode;
+    function blur(e) {
+        let parent = e.target.parentNode;
         parent.classList.remove("focused");
     }
 }
